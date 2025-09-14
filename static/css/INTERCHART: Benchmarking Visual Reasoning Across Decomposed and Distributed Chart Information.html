@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- ===== Meta for social sharing ===== -->
+  <meta name="description" content="INTERCHART is a diagnostic benchmark for visual reasoning across decomposed and distributed chart information, spanning DECAF, SPECTRA, and STORM subsets with increasing difficulty." />
+  <meta property="og:title" content="INTERCHART: Benchmarking Visual Reasoning Across Decomposed and Distributed Chart Information" />
+  <meta property="og:description" content="Multi-tier benchmark (DECAF, SPECTRA, STORM) evaluating VLMs on multi-chart reasoning, trend correlation, temporal inference, and majority-vote semantic evaluation." />
+  <meta property="og:url" content="https://your-domain.example/interchart" />
+  <meta property="og:image" content="static/images/tabel.ico" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:title" content="INTERCHART: Benchmarking Visual Reasoning Across Decomposed and Distributed Chart Information" />
+  <meta name="twitter:description" content="A diagnostic benchmark spanning DECAF, SPECTRA, STORM to stress-test multi-chart reasoning in VLMs." />
+  <meta name="twitter:image" content="static/images/tabel.ico" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="keywords" content="INTERCHART, charts, VLMs, multi-chart reasoning, DECAF, SPECTRA, STORM, benchmark" />
+
+  <title>INTERCHART: Benchmarking Visual Reasoning Across Decomposed and Distributed Chart Information</title>
+
+  <link rel="icon" type="image/x-icon" href="static/images/tabel.ico" />
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet" />
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" /> -->
+
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="static/css/bulma.min.css" />
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css" />
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css" />
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
+  <link rel="stylesheet" href="static/css/index.css" />
+
+  <!-- Template JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+  
+<!-- ===== Hero / Header ===== -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+
+            <!-- Title -->
+            <h1 class="title is-1 publication-title">
+
+              <span style="font-variant: small-caps;">InterChart</span> : Benchmarking Visual Reasoning Across Decomposed and Distributed Chart Information
+            </h1>
+
+            <!-- Authors -->
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://anirudh6415.github.io/" target="_blank">Anirudh Iyengar Kaniyar Narayana Iyengar<sup style="color: black;">*</sup></a>
+                <img src="images/authors/ASU-logo.png" alt="ASU" class="aff-logo">,
+              </span>
+              <span class="author-block">
+                <a href="https://www.linkedin.com/in/srija-mukhopadhyay/" target="_blank">Srija Mukhopadhyay<sup style="color: black;">*</sup></a>
+                <img src="images/authors/iit-h-logo.png" alt="IIIT Hyderabad" class="aff-logo">,
+              </span>
+              <span class="author-block">
+                <a href="https://www.linkedin.com/in/adnan-qidwai-9b6a6018a/" target="_blank">Adnan Qidwai<sup style="color: black;">*</sup></a>
+                <img src="images/authors/iit-h-logo.png" alt="IIIT Hyderabad" class="aff-logo">,
+              </span>
+              <span class="author-block">
+                <a href="https://www.linkedin.com/in/shubhankarsingh/" target="_blank">Shubhankar Singh</a>
+                <img src="images/authors/mercer_logo.jpeg" alt="Mercer Mettl" class="aff-logo">,
+              </span>
+              <span class="author-block">
+                <a href="https://www.cis.upenn.edu/~danroth/" target="_blank">Dan Roth</a>
+                <img src="images/authors/Upen-logo.png" alt="University of Pennsylvania" class="aff-logo">,
+              </span>
+              <span class="author-block">
+                <a href="https://vgupta123.github.io/" target="_blank">Vivek Gupta</a>
+                <img src="images/authors/ASU-logo.png" alt="ASU" class="aff-logo">
+              </span>
+            </div>
+
+            <!-- Affiliations (kept simple; same visual style) -->
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <img src="images/authors/ASU-logo.png" alt="ASU" class="aff-logo"> Arizona State University,
+              </span>
+              <span class="author-block">
+                <img src="images/authors/iit-h-logo.png" alt="IIIT Hyderabad" class="aff-logo"> IIIT Hyderabad,
+              </span>
+              <span class="author-block">
+                <img src="images/authors/mercer_logo.jpeg" alt="Mercer Mettl" class="aff-logo"> Mercer Mettl,
+              </span>
+              <span class="author-block">
+                <img src="images/authors/Upen-logo.png" alt="University of Pennsylvania" class="aff-logo"> University of Pennsylvania
+              </span>
+            </div>
+
+            <!-- Venue/Status line -->
+            <div class="is-size-5 publication-authors" style="margin-top:1rem; border-top:1px solid #ddd; padding-top:0.5rem;">
+              <span class="author-block publication-venue" style="font-weight:600; color:#696969">
+                ACL ARR (July 2025) &nbsp;•&nbsp; Preprint
+              </span>
+              <div class="is-size-5 publication-authors" style="margin-top:0.5rem;">
+                <span class="author-block eql-cntrb"><sup>*</sup> Equal contribution</span>
+              </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="column has-text-centered">
+              <div class="publication-links">
+
+                <!-- Paper (local copy) -->
+                <span class="link-block">
+                  <a href="Interchart_arxiv__ACL_ARR_July_2025_Copy.pdf" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Paper (PDF)</span>
+                  </a>
+                </span>
+
+                <!-- OpenReview (placeholder if needed) -->
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                    <span class="icon"><i class="ai ai-open-access"></i></span>
+                    <span>OpenReview</span>
+                  </a>
+                </span>
+
+                <!-- Explore Link -->
+                <span class="link-block">
+                  <a href="explore.html" class="external-link button is-normal is-rounded is-dark" target="_self">
+                    <span class="icon"><i class="fas fa-compass"></i></span>
+                    <span>Explore Examples</span>
+                  </a>
+                </span>
+
+                <!-- Code (placeholder) -->
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span>Code (coming soon)</span>
+                  </a>
+                </span>
+
+                <!-- Dataset (placeholder) -->
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                    <span class="icon"><i class="fas fa-database"></i></span>
+                    <span>Dataset Access</span>
+                  </a>
+                </span>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Short Teaser (optional image/video) ===== -->
+  <!-- <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="static/images/teaser_tabard.png" alt="TABARD teaser" style="width:100%; border-radius:12px;" />
+        <h2 class="subtitle has-text-centered" style="margin-top:1rem;">
+          TABARD spans eight anomaly categories (value, factual, logical, temporal, calculation, security, normalization, consistency) across diverse domains and table structures, enabling nuanced evaluation of LLMs for anomaly detection.
+        </h2>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- ===== Abstract ===== -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">About</h2>
+          <div class="content has-text-justified">
+            <p>
+              We study the capabilities of large language models (LLMs) in detecting fine-grained anomalies in tabular data. Specifically, we examine: (1) how well LLMs can identify diverse anomaly types—including factual, logical, temporal, and value-based errors; (2) the impact of prompt design and prompting strategies; and (3) the effect of table structure and anomaly type on detection accuracy. To this end, we introduce TABARD, a new benchmark constructed by perturbing tables from WikiTQ, FeTaQA, Spider, and BEAVER. The dataset spans multiple domains and eight anomaly categories, including paired clean and corrupted tables. We evaluate LLMs using direct, indirect, and Chain-of-Thought (CoT) prompting. Our results reveal notable limitations in standard prompting, especially for complex reasoning tasks and longer tables. To overcome these issues, we propose a unified framework combining multi-step prompting, self-verification, and constraint-based rule execution. Our approach significantly improves precision and recall, offering a promising direction for robust and interpretable anomaly detection in tables.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+      <!-- ===== Anomaly Figure Section ===== -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered">Overview of the eight anomaly categories in TABARD.</h2>
+      <div class="columns is-centered">
+        <div class="column is-10 has-text-centered">
+          <figure class="image" style="max-width:100%; margin: 0 auto;">
+            <img src="images/tabel.png" 
+                 alt="Comprehensive anomaly table with arrows highlighting anomalous cells" 
+                 style="width:100%; border-radius:8px;" />
+          </figure>
+          <h2 class="subtitle has-text-centered" style="margin-top:1rem;">
+            A comprehensive table containing instances of all anomaly types. Each arrow highlights 
+            an anomalous cell, annotated with the anomaly category and a brief explanation of its cause.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="dataset">
+  <div class="container is-max-desktop">
+    <h2 class="title is-2 has-text-centered">Dataset</h2>
+
+    <!-- Dataset Generation -->
+    <div class="content">
+      <h3 class="title is-4">Generation</h3>
+      <p>
+        TABARD is built by perturbing clean tables from public datasets such as 
+        WikiTQ, FeTaQA, Spider, and BEAVER. Each table was modified with 
+        category-specific prompts to inject targeted anomalies 
+        (e.g., logical errors, temporal inconsistencies, miscalculations), while 
+        preserving the overall structure. This process ensures a controlled yet 
+        diverse benchmark covering eight anomaly categories.
+      </p>
+    </div>
+
+    <!-- Dataset Statistics and Verification -->
+    <div class="content" style="margin-top:2rem;">
+      <h3 class="title is-4">Statistics & Verification</h3>
+      <p>
+        The dataset includes paired clean and corrupted tables spanning multiple 
+        domains. Manual verification was conducted on a representative subset, 
+        yielding strong inter-annotator agreement (κ ≈ 0.94). Below are summary 
+        tables illustrating dataset scale and verification quality.
+      </p>
+
+      <div class="columns is-centered" style="margin-top:1.5rem;">
+        <div class="column is-6 has-text-centered">
+          <figure class="image">
+            <img src="images/dataset_stats.png" 
+                 alt="TABARD dataset statistics table" 
+                 style="width:100%; border-radius:8px;" />
+          </figure>
+          <p class="is-size-6 has-text-grey">Table 1: Dataset statistics.</p>
+        </div>
+        <div class="column is-6 has-text-centered">
+          <figure class="image">
+            <img src="images/verification.png" 
+                 alt="TABARD verification summary table" 
+                 style="width:100%; border-radius:8px;" />
+          </figure>
+          <p class="is-size-6 has-text-grey">Table 2: Verification results.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== Dataset Section ===== -->
+<!-- <section class="section" id="dataset">
+  <div class="container is-max-desktop">
+    <h2 class="title is-2 has-text-centered">Dataset</h2>
+    <div class="content">
+      <h3 class="title is-4">Generation</h3>
+      <p>
+        TABARD is built by perturbing clean tables from public datasets such as 
+        WikiTQ, FeTaQA, Spider, and BEAVER. Each table was modified with 
+        category-specific prompts to inject targeted anomalies 
+        (e.g., logical errors, temporal inconsistencies, miscalculations), while 
+        preserving the overall structure. This process ensures a controlled yet 
+        diverse benchmark covering eight anomaly categories.
+      </p>
+    </div>
+
+  
+    <div class="content" style="margin-top:2rem;">
+      <h3 class="title is-4">Statistics & Verification</h3>
+      <p>
+        The dataset includes paired clean and corrupted tables spanning multiple 
+        domains. Manual verification was conducted on a representative subset, 
+        yielding strong inter-annotator agreement (κ ≈ 0.94). Below are summary 
+        tables illustrating dataset scale and verification quality.
+      </p>
+
+
+      <div class="has-text-centered" style="margin-top:1.5rem;">
+        <figure class="image" style="max-width:80%; margin:0 auto;">
+          <img src="images/dataset_stats.png" 
+               alt="TABARD dataset statistics table" 
+               style="width:80%; border-radius:8px;" />
+        </figure>
+        <p class="is-size-6 has-text-grey">Table 1: Dataset statistics.</p>
+      </div>
+
+
+      <div class="has-text-centered" style="margin-top:2rem;">
+        <figure class="image" style="max-width:80%; margin:0 auto;">
+          <img src="images/verification.png" 
+               alt="TABARD verification summary table" 
+               style="width:80%; border-radius:8px;" />
+        </figure>
+        <p class="is-size-6 has-text-grey">Table 2: Verification results.</p>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- ===== Modeling Approaches Section ===== -->
+<section class="section" id="modeling-approaches">
+  <div class="container is-max-desktop">
+    <h2 class="title is-2 has-text-centered">Modeling Approaches</h2>
+    <div class="content has-text-justified">
+      <p>
+        Alongside baseline prompting strategies, we introduce three new methods 
+        designed to improve anomaly detection performance and interpretability:
+      </p>
+      <ul>
+        <li>
+          <strong>MUSEVE</strong> – a <em>multi-step reasoning</em> approach where 
+          the model sequentially examines table structure, highlights potential anomalies, 
+          and verifies predictions before finalizing outputs.
+        </li>
+        <li>
+          <strong>SEVCOT</strong> – a <em>self-verification with Chain-of-Thought</em> 
+          prompting method that encourages models to generate reasoning traces and 
+          then critique or validate their own answers, reducing false positives.
+        </li>
+        <li>
+          <strong>NSCM (Neuro-Symbolic Constraint Method)</strong> – a hybrid approach 
+          that translates table schemas and sampled values into <em>constraint rules</em>, 
+          which are then executed to identify violations. This improves efficiency on 
+          longer tables and provides interpretable, rule-based anomaly explanations.
+        </li>
+      </ul>
+      <p>
+        Together, these methods outperform standard prompting by combining structured 
+        reasoning, self-checking, and executable constraints, offering more robust and 
+        interpretable anomaly detection in tables.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== Results Section ===== -->
+<section class="hero is-small" id="results">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-2 has-text-centered">Results</h2>
+
+      <!-- Brief summary -->
+      <div class="content has-text-justified" style="margin-bottom:2rem;">
+        <p>
+          Our evaluation highlights clear limitations of standard prompting for anomaly detection in tables. 
+          Table&nbsp;3 shows that accuracy drops significantly on longer or more complex tables, with 
+          Chain-of-Thought reasoning (CoT) yielding modest improvements. 
+          Table&nbsp;4 compares baseline prompting with our proposed methods — MUSEVE, SEVCOT, 
+          and the neuro-symbolic constraint method (NSCM). These approaches achieve higher precision 
+          and recall, offering more robust and interpretable detection than conventional prompting.
+        </p>
+      </div>
+
+      <!-- Results carousel -->
+      <div id="results-carousel" class="carousel results-carousel">
+
+        <!-- Table 3 -->
+        <div class="item" style="height:800px; display:flex; flex-direction:column; justify-content:center;">
+          <img src="images/tabel3.png" 
+               alt="TABARD Results - Table 3" 
+               style="max-width:80%; max-height:500px; margin:0 auto; display:block; object-fit:contain; border-radius:8px;" />
+          <h2 class="subtitle has-text-centered" style="margin-top:1rem;">
+            Table 3: Average Precision (P) and Recall (R) across anomaly categories on FeTaQA, Spider+BEAVER, and WikiTQ, using four LLMs under different prompting strategies (with/without CoT, MUSEVE, SEVCOT).
+          </h2>
+        </div>
+
+        <!-- Table 4 -->
+        <div class="item" style="height:800px; display:flex; flex-direction:column; justify-content:center;">
+          <img src="images/tabel4.png" 
+               alt="TABARD Results - Table 4" 
+               style="max-width:80%; max-height:600px; margin:0 auto; display:block; object-fit:contain; border-radius:8px;" />
+          <h2 class="subtitle has-text-centered" style="margin-top:1rem;">
+            Table 4: Average Precision (P) and Recall (R) for ChatGPT-4o and Gemini-1.5 Pro across eight anomaly categories on FeTaQA, Spider+BEAVER, and WikiTQ, under different prompting strategies (with/without CoT, MUSEVE, SEVCOT).
+          </h2>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- ===== Results / Figures Carousel (placeholders) ===== -->
+  <!-- <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <img src="static/images/carousel1.jpg" alt="Anomaly categories overview" />
+            <h2 class="subtitle has-text-centered">Overview of the eight anomaly categories in TABARD.</h2>
+          </div>
+          <div class="item">
+            <img src="static/images/carousel2.jpg" alt="Prompting levels" />
+            <h2 class="subtitle has-text-centered">Evaluation across L1–L4 prompting and CoT reasoning.</h2>
+          </div>
+          <div class="item">
+            <img src="static/images/carousel3.jpg" alt="Methods" />
+            <h2 class="subtitle has-text-centered">Multi-step verification (MUSEVE, SEVCOT) and constraint-based NSCM.</h2>
+          </div>
+          <div class="item">
+            <img src="static/images/carousel4.jpg" alt="Performance" />
+            <h2 class="subtitle has-text-centered">Precision/recall improvements and interpretable outputs.</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- ===== Video Presentation (optional embed) ===== -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Video Presentation</h2>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <div class="publication-video">
+              <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Poster / PDF Embed ===== -->
+  <!-- <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title">Paper</h2>
+        <iframe src="static/pdfs/tabard.pdf" width="100%" height="650" style="border:0; border-radius:12px;"></iframe>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- ===== Team Section ===== -->
+<!-- ===== Team Section ===== -->
+<section class="section" id="team">
+  <div class="container is-max-desktop">
+    <h2 class="title is-2 has-text-centered">Team</h2>
+
+    <div class="team-row">
+      <div class="team-member">
+        <a href="https://www.linkedin.com/in/manan-roy-choudhury-2b2093208/" target="_blank">
+          <img src="images/authors/manan_choudhury.png" alt="Manan Roy Choudhury">
+          Manan Roy <br> Choudhury
+        </a>
+      </div>
+
+      <div class="team-member">
+        <a href="https://anirudh6415.github.io/" target="_blank">
+          <img src="images/authors/anirudh_crop.png" alt="Anirudh Iyengar Kaniyar Narayana Iyengar">
+          Anirudh Iyengar <Br> Kaniyar Narayana Iyengar
+        </a>
+      </div>
+
+      <div class="team-member">
+        <a href="https://www.linkedin.com/in/shikhharsiingh/" target="_blank">
+          <img src="images/authors/Shikhhar_singh.png" alt="Shikhhar Siingh">
+          Shikhhar Siingh
+        </a>
+      </div>
+
+      <div class="team-member">
+        <a href="https://www.linkedin.com/in/sugeeth" target="_blank">
+          <img src="images/authors/sugeeth.jpeg" alt="Sai Raghavendra Sugeeth Puranam">
+          Sai Raghavendra <br> Sugeeth Puranam
+        </a>
+      </div>
+
+      <div class="team-member">
+        <a href="https://vgupta123.github.io/" target="_blank">
+          <img src="images/authors/Vivek_gupta.png" alt="Vivek Gupta">
+          Vivek Gupta
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- ===== BibTeX ===== -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <h4>Please cite our paper as below if you use the TABARD dataset.</h4>
+      <pre><code>@inproceedings{tabard2025,
+  title={TABARD: A Novel Benchmark for Tabular Anomaly Analysis, Reasoning and Detection},
+  author={Choudhury, Manan Roy and Iyengar, Anirudh and Siingh, Shikhhar and Sugeeth, Raghavendra and Gupta, Vivek},
+  booktitle={ACL ARR May},
+  year={2025},
+  note={Preferred venue: EMNLP. URL: https://openreview.net/forum?id=8Y1G4XD3vR}
+}</code></pre>
+    </div>
+  </section>
+
+  <!-- Partner Logos Strip -->
+  <section class="logo-strip">
+    <div class="container has-text-centered">
+      <div class="logo-row">
+        <img src="images/authors/ASU-logo.png" alt="ASU" class="logo-strip-img">
+        <img src="images/authors/iit-h-logo.png" alt="IIIT Hyderabad" class="logo-strip-img">
+        <img src="images/authors/mercer_logo.jpeg" alt="Mercer Mettl" class="logo-strip-img">
+        <img src="images/authors/Upen-logo.png" alt="University of Pennsylvania" class="logo-strip-img">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page. You are free to borrow the source code of this website; please link back to this page in the footer. This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>

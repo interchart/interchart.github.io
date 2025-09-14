@@ -1,42 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- ===== Meta for social sharing ===== -->
+  <meta name="description" content="INTERCHART is a diagnostic benchmark for visual reasoning across decomposed and distributed chart information, spanning DECAF, SPECTRA, and STORM subsets with increasing difficulty." />
+  <meta property="og:title" content="INTERCHART: Benchmarking Visual Reasoning Across Decomposed and Distributed Chart Information" />
+  <meta property="og:description" content="Multi-tier benchmark (DECAF, SPECTRA, STORM) evaluating VLMs on multi-chart reasoning, trend correlation, temporal inference, and majority-vote semantic evaluation." />
+  <meta property="og:url" content="https://your-domain.example/interchart" />
+  <meta property="og:image" content="static/images/bar-chart.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:title" content="INTERCHART: Benchmarking Visual Reasoning Across Decomposed and Distributed Chart Information" />
+  <meta name="twitter:description" content="A diagnostic benchmark spanning DECAF, SPECTRA, STORM to stress-test multi-chart reasoning in VLMs." />
+  <meta name="twitter:image" content="static/images/bar-chart.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="keywords" content="INTERCHART, charts, VLMs, multi-chart reasoning, DECAF, SPECTRA, STORM, benchmark" />
+
+  <title>INTERCHART: Benchmarking Visual Reasoning Across Decomposed and Distributed Chart Information</title>
+
+  <link rel="icon" type="image/x-icon" href="static/images/bar-chart.png" />
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet" />
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" /> -->
 
 
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="static/css/bulma.min.css" />
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css" />
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css" />
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
+  <link rel="stylesheet" href="static/css/index.css" />
 
-
-  <title>Academic Project Page</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
-
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
-
+  <!-- Template JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
@@ -46,267 +44,573 @@
 </head>
 <body>
 
-
+  
+<!-- ===== Hero / Header ===== -->
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+
+            <!-- Title -->
+            <h1 class="title is-1 publication-title">
+
+              <span style="font-variant: small-caps;">InterChart</span> : Benchmarking Visual Reasoning Across Decomposed and Distributed Chart Information
+            </h1>
+
+            <!-- Authors -->
             <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
+                <a href="https://anirudh6415.github.io/" target="_blank">Anirudh Iyengar Kaniyar Narayana Iyengar<sup style="color: black;">*</sup></a>
+                <img src="images/authors/ASU-logo.png" alt="ASU" class="aff-logo">,
+              </span>
+              <span class="author-block">
+                <a href="https://www.linkedin.com/in/ajirs/" target="_blank">Srija Mukhopadhyay<sup style="color: black;">*</sup></a>
+                <img src="images/authors/iit-h-logo.png" alt="IIIT Hyderabad" class="aff-logo">,
+              </span>
+              <span class="author-block">
+                <a href="https://www.linkedin.com/in/adnanqidwai/" target="_blank">Adnan Qidwai<sup style="color: black;">*</sup></a>
+                <img src="images/authors/iit-h-logo.png" alt="IIIT Hyderabad" class="aff-logo">,
+              </span>
+              <span class="author-block">
+                <a href="https://www.linkedin.com/in/koseii/" target="_blank">Shubhankar Singh</a>
+                <img src="images/authors/mercer_logo.jpeg" alt="Mercer Mettl" class="aff-logo">,
+              </span>
+              <span class="author-block">
+                <a href="https://www.cis.upenn.edu/~danroth/" target="_blank">Dan Roth</a>
+                <img src="images/authors/Upen-logo.png" alt="University of Pennsylvania" class="aff-logo">,
+              </span>
+              <span class="author-block">
+                <a href="https://vgupta123.github.io/" target="_blank">Vivek Gupta</a>
+                <img src="images/authors/ASU-logo.png" alt="ASU" class="aff-logo">
+              </span>
+            </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+            <!-- Affiliations (kept simple; same visual style) -->
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <img src="images/authors/ASU-logo.png" alt="ASU" class="aff-logo"> Arizona State University,
+              </span>
+              <span class="author-block">
+                <img src="images/authors/iit-h-logo.png" alt="IIIT Hyderabad" class="aff-logo"> IIIT Hyderabad,
+              </span>
+              <span class="author-block">
+                <img src="images/authors/mercer_logo.jpeg" alt="Mercer Mettl" class="aff-logo"> Mercer Mettl,
+              </span>
+              <span class="author-block">
+                <img src="images/authors/Upen-logo.png" alt="University of Pennsylvania" class="aff-logo"> University of Pennsylvania
+              </span>
+            </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
+            <!-- Venue/Status line -->
+            <div class="is-size-5 publication-authors" style="margin-top:1rem; padding-top:0.5rem;  gap: 0.4rem 1.5rem;">
+              <span class="author-block publication-venue" style="font-weight:600; color:#696969">
+                ACL ARR (July 2025)
+              </span>
+                <span class="author-block eql-cntrb" style=" font-size: 0.8rem;"><sup>*</sup> Equal contribution</span>
+            </div>
 
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
+            <!-- Buttons -->
+            <div class="publication-links" style="margin-top:1rem; border-top:1px solid #ddd; padding-top:0.5rem;">
 
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
+              <!-- Paper -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2508.07630" class="pub-link" target="_blank" rel="noopener">
+                  <span class="icon"><i class="ai ai-arxiv"></i></span>
                   <span>arXiv</span>
                 </a>
               </span>
+
+
+
+              <!-- OpenReview -->
+              <!-- <span class="link-block">
+                <a href="#" class="pub-link" target="_blank">
+                  <span class="icon"><i class="ai ai-open-access"></i></span>
+                  <span>OpenReview</span>
+                </a>
+              </span> -->
+
+              <!-- Explore -->
+              <span class="link-block">
+                <a href="explore.html" class="pub-link" target="_self">
+                  <span class="icon"><i class="fas fa-compass"></i></span>
+                  <span>Explore</span>
+                </a>
+              </span>
+
+              <!-- Explore -->
+              <span class="link-block">
+                <a href="annoatation.html" class="pub-link" target="_self">
+                  <span class="icon"><i class="fas fa-project-diagram"></i></span>
+                  <span>Data-generation</span>
+                </a>
+              </span>
+
+              <!-- Code -->
+              <span class="link-block">
+                <a href="#" class="pub-link" target="_blank">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code (coming soon)</span>
+                </a>
+              </span>
+
+              <!-- Dataset -->
+              <span class="link-block">
+                <a href="#" class="pub-link" target="_blank">
+                  <span class="icon"><i class="fas fa-database"></i></span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Short Teaser (optional image/video) ===== -->
+  <!-- <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="static/images/teaser_tabard.png" alt="TABARD teaser" style="width:100%; border-radius:12px;" />
+        <h2 class="subtitle has-text-centered" style="margin-top:1rem;">
+          TABARD spans eight anomaly categories (value, factual, logical, temporal, calculation, security, normalization, consistency) across diverse domains and table structures, enabling nuanced evaluation of LLMs for anomaly detection.
+        </h2>
+      </div>
+    </div>
+  </section> -->
+
+<!-- ===== About / Abstract (InterChart) ===== -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">About</h2>
+        <div class="content has-text-justified">
+          <p>
+            <strong><span style="font-variant: small-caps;">InterChart</span></strong> is a diagnostic benchmark for assessing how well vision-language models
+            reason across <em>multiple related charts</em> a core skill for scientific reports, finance, and public
+            dashboards. Unlike prior single-chart benchmarks, <span style="font-variant: small-caps;">InterChart</span> covers diverse question types from
+            entity inference and trend correlation to numerical estimation and abstract multi-step reasoning grounded
+            in 2–3 thematically or structurally related charts. We organize the benchmark into three tiers of increasing
+            difficulty: (1) factual reasoning over individual charts, (2) integrative analysis across synthetically aligned
+            chart sets, and (3) semantic inference over visually complex, real-world chart pairs.
+          </p>
+          <p>
+            Evaluations on state-of-the-art open- and closed-source VLMs reveal <em>consistent accuracy drops as
+            visual complexity rises</em>, while chart decomposition improves performance highlighting current
+            limitations in cross-chart integration. Overall, <span style="font-variant: small-caps;">InterChart</span> provides a rigorous framework for advancing
+            multimodal reasoning in complex, multi-visual settings.
+          </p>
+          <p class="is-size-6">
+            Dataset scope (high level): 5,214 validated QA pairs spanning three subsets DECAF, SPECTRA, and
+            STORM across 1,012 multi-chart contexts and 2,706 unique chart images.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Benchmark Overview (hero first) ===== -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered">Overview of the <span style="font-variant: small-caps;">InterChart</span> benchmark.</h2>
+      <div class="columns is-centered">
+        <div class="column is-10 has-text-centered">
+          <figure class="image" style="max-width:100%; margin:0 auto;">
+            <img src="images/Chart_new.png"
+                 alt="Overview figure of the InterChart benchmark: DECAF, SPECTRA, STORM"
+                 class="img-shadow"
+                 style="width:100%; border-radius:8px;" />
+          </figure>
+          <h2 class="subtitle has-text-centered" style="margin-top:1rem;">
+            <span style="font-variant: small-caps;">InterChart</span> spans three subsets: <strong>DECAF</strong> (Decomposed Elementary Charts with Answerable Facts),
+            <strong>SPECTRA</strong> (Synthetic Plots for Event-based Correlated Trend Reasoning), and <strong>STORM</strong> (Sequential Temporal reasoning Over Real-world Multi-domain charts).
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Dataset ===== -->
+<section class="section" id="dataset">
+  <div class="container is-max-desktop">
+    <h2 class="title is-2 has-text-centered">Dataset</h2>
+
+    <div class="content">
+      <p>
+        <span style="font-variant: small-caps;">InterChart</span> introduces a structured benchmark spanning three levels of complexity:
+        <strong>DECAF</strong>,
+        <strong>SPECTRA</strong>, and
+        <strong>STORM</strong>.
+        Together, these subsets evaluate how vision-language models handle factual lookups, cross-chart integration,
+        and semantic inference under realistic conditions.
+      </p>
+    </div>
+
+    <!-- ===== Description ===== -->
+    <div class="content" style="margin-top:2rem;">
+      <h3 class="title is-4">Description</h3>
+      <p>
+        The summary tables below outline dataset composition. The first table (left) reports <strong>DECAF</strong> distributions:
+        chart types, original source datasets, and totals from the QA generation pipeline. The second table (right) gives
+        <strong>SPECTRA</strong> and <strong>STORM</strong> splits and overall totals. Together, they describe the breadth of chart genres and
+        reasoning settings covered in <span style="font-variant: small-caps;">InterChart</span>.
+      </p>
+
+      <div class="columns is-centered" style="margin-top:1.25rem;">
+        <!-- Left: DECAF distributions -->
+        <div class="column is-6 has-text-centered">
+          <figure class="image">
+            <img src="images/decaf.png"
+                 alt="DECAF distributions: chart types, original sources, QA methods, totals"
+                 class="img-shadow"
+                 style="width:100%; border-radius:8px;" />
+          </figure>
+          <p class="is-size-6 has-text-grey" style="margin-top:.5rem;">
+            Table 1: <strong>DECAF</strong> distributions and totals.
+          </p>
+        </div>
+
+        <!-- Right: SPECTRA & STORM distributions -->
+        <div class="column is-6 has-text-centered">
+          <figure class="image">
+            <img src="images/spectra_strom.png"
+                 alt="SPECTRA & STORM distribution and totals"
+                 class="img-shadow"
+                 style="width:100%; border-radius:8px;" />
+          </figure>
+          <p class="is-size-6 has-text-grey" style="margin-top:.5rem;">
+            Table 2: <strong>SPECTRA</strong> &amp; <strong>STORM</strong> distributions and totals.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Annotation & Verification ===== -->
+    <div class="content" style="margin-top:2rem;">
+      <h3 class="title is-4">Annotation &amp; Verification</h3>
+      <p>
+        We apply human verification to filter automatically generated questions and answers, retaining only high-quality items.
+        The QA samples table (left) shows pre- and post-verification counts with percentage drop. Inter-annotator agreement
+        (right) is reported for <strong>STORM</strong> using Cohen’s κ and Jaccard Index. See the appendix for guidelines,
+        prompts, and adjudication details.
+      </p>
+
+      <div class="columns is-centered" style="margin-top:1.25rem;">
+        <!-- Left: QA samples (pre/post/% drop) -->
+        <div class="column is-6 has-text-centered">
+          <figure class="image">
+            <img src="images/QA.png"
+                 alt="QA samples before and after manual verification for DECAF and SPECTRA"
+                 class="img-shadow"
+                 style="width:100%; border-radius:8px;" />
+          </figure>
+          <p class="is-size-6 has-text-grey" style="margin-top:.5rem;">
+            Table 3: QA samples before/after verification (DECAF &amp; SPECTRA).
+          </p>
+        </div>
+
+        <!-- Right: Inter-annotator agreement (κ, Jaccard) -->
+        <div class="column is-6 has-text-centered">
+          <figure class="image">
+            <img src="images/Verify.png"
+                 alt="Inter-annotator agreement for STORM (Cohen’s kappa and Jaccard Index)"
+                 class="img-shadow"
+                 style="width:100%; border-radius:8px;" />
+          </figure>
+          <p class="is-size-6 has-text-grey" style="margin-top:.5rem;">
+            Table 4: <strong>STORM</strong> annotation agreement (Cohen’s κ, Jaccard).
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section" id="input-formats">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Visual Input Formats</h2>
+
+    <div class="content has-text-justified">
+      <p>
+        In <span style="font-variant: small-caps;">InterChart</span>, multi-chart contexts are provided in two formats:
+        <strong>Combined</strong> (all charts stitched on a single canvas) and
+        <strong>Interleaved</strong> (each chart supplied as a separate image in order).
+        Both use the same textual QA context, allowing us to isolate the effect of packing charts together
+        versus presenting them sequentially on model reasoning and evidence use.
+      </p>
+    </div>
+
+    <div class="columns is-centered" style="margin-top: 1rem;">
+      <div class="column is-10 has-text-centered">
+        <figure class="image" style="max-width:60%; margin:0 auto;">
+          <!-- Save your provided figure as images/input_formats.png (or update the path) -->
+          <img
+            src="images/v.png"
+            alt="Visual input formats in InterChart: Combined (stitched multi-chart) vs. Interleaved (separate sequential charts) with shared textual QA."
+            class="img-shadow"
+            style="width:100%; border-radius:8px;" />
+        </figure>
+        <p class="is-size-6 has-text-grey" style="margin-top:.6rem;">
+          Figure. Visual input formats in <span style="font-variant: small-caps;">InterChart</span>:
+          <em>Combined</em> (stitched multi-chart image) and <em>Interleaved</em> (separate, ordered images),
+          evaluated under the same textual QA.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== Results ===== -->
+<section class="hero is-small" id="results">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-2 has-text-centered">Results</h2>
+
+      <!-- Brief summary -->
+      <div class="content has-text-justified" style="margin-bottom:1.25rem;">
+        <p>
+          We evaluate models on <span style="font-variant: small-caps;">InterChart</span> with an LLM-as-judge, using
+          majority voting across evaluators. Scores are grouped by <em>visual context</em> (Combined vs. Interleaved)
+          and <em>prompting strategy</em> (Zero-Shot, Zero-Shot CoT, Few-Shot CoT<sub>D</sub>). “Net” is the mean over subsets.
+        </p>
+      </div>
+
+      <!-- 1) Single main table first (Table 5) -->
+      <div class="columns is-centered">
+        <div class="column is-10 has-text-centered">
+          <figure class="image" style="max-width:100%; margin:0 auto;">
+            <img
+              src="images/main_table5.png"
+              alt="Table 5: Accuracies by model, visual format, and prompting strategy on DECAF, SPECTRA, STORM with Net"
+              class="img-shadow"
+              style="width:100%; border-radius:8px;" />
+          </figure>
+          <h3 class="subtitle has-text-centered" style="margin-top:1rem;">
+            <strong>Table 5.</strong> Accuracies with majority-vote evaluation across models and strategies.
+            Top: <em>Combined</em>; Bottom: <em>Interleaved</em>. Columns show DECAF, SPECTRA, STORM and Net.
+          </h3>
+        </div>
+      </div>
+
+      <!-- 2) Grid of four tables (2×2): Tables 6–9 -->
+      <div class="content has-text-justified" style="margin-top:1.75rem;">
+        <p>
+          The grid below summarizes specific analyses: chart-to-table prompting & rendering (Table&nbsp;6),
+          distributional breakdowns for <strong>DECAF</strong> (Table&nbsp;7) and <strong>SPECTRA</strong> (Table&nbsp;8),
+          and <strong>STORM</strong> reasoning types across visual formats (Table&nbsp;9).
+        </p>
+      </div>
+
+      <div class="columns is-multiline is-centered" style="margin-top:.5rem;">
+        <!-- Table 6 -->
+        <div class="column is-6 has-text-centered">
+          <figure class="image is-flex is-justify-content-center">
+            <img
+              src="images/im-table.png"
+              alt="Table 6: Chart-to-table prompting and rendering strategies across DECAF, SPECTRA, STORM, and DECAFₒ"
+              class="img-shadow"
+              style="width:90%; border-radius:8px;" />
+          </figure>
+          <p class="is-size-6 has-text-grey" style="margin-top:.5rem;">
+            <strong>Table 6.</strong> Chart-to-table prompting &amp; rendering for DECAF, SPECTRA, STORM, and <strong>DECAF</strong><sub>o</sub>.
+          </p>
+        </div>
+
+        <!-- Table 7 -->
+        <div class="column is-6 has-text-centered">
+          <figure class="image is-flex is-justify-content-center">
+            <img
+              src="images/decafresult.png"
+              alt="Table 7: DECAF chart-type distribution (Mean and Best accuracies)"
+              class="img-shadow"
+              style="width:70%; border-radius:8px;" />
+          </figure>
+          <p class="is-size-6 has-text-grey" style="margin-top:.5rem;">
+            <strong>Table 7.</strong> <strong>DECAF</strong> by chart type (Mean / Best).
+          </p>
+        </div>
+
+        <!-- Table 8 -->
+        <div class="column is-6 has-text-centered">
+          <figure class="image is-flex is-justify-content-center">
+            <img
+              src="images/spectra_result.png"
+              alt="Table 8: SPECTRA question category distribution (Correlated vs Independent; Mean and Best)"
+              class="img-shadow"
+              style="width:90%; border-radius:8px;" />
+          </figure>
+          <p class="is-size-6 has-text-grey" style="margin-top:.5rem;">
+            <strong>Table 8.</strong> <strong>SPECTRA</strong> question categories (Correlated vs. Independent; Mean / Best).
+          </p>
+        </div>
+
+        <!-- Table 9 -->
+        <div class="column is-6 has-text-centered">
+          <figure class="image is-flex is-justify-content-center">
+            <img
+              src="images/strom-result.png"
+              alt="Table 9: STORM reasoning type categorization comparing Interleaved vs Combined (Mean and Best)"
+              class="img-shadow"
+              style="width:80%; border-radius:8px;" />
+          </figure>
+          <p class="is-size-6 has-text-grey" style="margin-top:.5rem;">
+            <strong>Table 9.</strong> <strong>STORM</strong> reasoning types (Abstract Numerical, Entity Inference, Range Estimation)
+            under <em>Interleaved</em> vs. <em>Combined</em> formats (Mean / Best).
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- ===== Video Presentation (optional embed) ===== -->
+  <!-- <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Video Presentation</h2>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <div class="publication-video">
+              <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section> -->
 
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
+  <!-- ===== Poster / PDF Embed ===== -->
+  <!-- <section class="hero is-small is-light">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
+      <div class="container">
+        <h2 class="title">Paper</h2>
+        <iframe src="static/pdfs/tabard.pdf" width="100%" height="650" style="border:0; border-radius:12px;"></iframe>
+      </div>
     </div>
-  </div>
-</section>
-<!-- End teaser video -->
+  </section> -->
 
-<!-- Paper abstract -->
-<section class="section hero is-light">
+<!-- ===== Team (Authors from the paper) ===== -->
+<section class="section" id="team">
   <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
-        </div>
+    <h2 class="title is-2 has-text-centered">Team</h2>
+
+    <div class="team-row">
+      <!-- Anirudh Iyengar Kaniyar Narayana Iyengar (*) -->
+      <div class="team-member has-text-centered">
+        <a href="https://anirudh6415.github.io/" target="_blank">
+          <img src="images/authors/anirudh_crop.png" alt="Anirudh Iyengar Kaniyar Narayana Iyengar" class="img-shadow" />
+          Anirudh Iyengar
+        </a>
+      </div>
+
+      <!-- Srija Mukhopadhyay (*) -->
+      <div class="team-member has-text-centered">
+        <a href="https://www.linkedin.com/in/ajirs/" target="_blank">
+          <img src="images/authors/sreeja.jpeg" alt="Srija Mukhopadhyay" class="img-shadow" />
+          Srija <br> Mukhopadhyay
+        </a>
+      </div>
+
+      <!-- Adnan Qidwai -->
+      <div class="team-member has-text-centered">
+        <a href="https://www.linkedin.com/in/adnanqidwai/" target="_blank">
+          <img src="images/authors/adnanqidwai.jpeg" alt="Adnan Qidwai" class="img-shadow" />
+          Adnan Qidwai
+        </a>
+      </div>
+
+      <!-- Shubhankar Singh -->
+      <div class="team-member has-text-centered">
+        <a href="https://www.linkedin.com/in/koseii/" target="_blank">
+          <img src="images/authors/Shubhankar.jpg" alt="Shubhankar Singh" class="img-shadow" />
+          Shubhankar <br> Singh
+        </a>
+      </div>
+
+      <!-- Dan Roth -->
+      <div class="team-member has-text-centered">
+        <a href="https://www.cis.upenn.edu/~danroth/" target="_blank">
+          <img src="images/authors/dan-roth.jpg" alt="Dan Roth" class="img-shadow" />
+          Dan Roth
+        </a>
+      </div>
+
+      <!-- Vivek Gupta -->
+      <div class="team-member has-text-centered">
+        <a href="https://vgupta123.github.io/" target="_blank">
+          <img src="images/authors/Vivek_gupta.png" alt="Vivek Gupta" class="img-shadow" />
+          Vivek Gupta
+        </a>
       </div>
     </div>
   </div>
 </section>
-<!-- End paper abstract -->
 
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
+
+  <!-- ===== BibTeX ===== -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <h4>Please cite our paper as below if you use the <span style="font-variant: small-caps;">InterChart</span>  dataset.</h4>
+      <pre><code>@inproceedings{iyengar2025interchart,
+  title={InterChart: Benchmarking Visual Reasoning Across Decomposed and Distributed Chart Information},
+  author={Iyengar, Anirudh Iyengar Kaniyar Narayana and Mukhopadhyay, Srija and Qidwai, Adnan and Singh, Shubhankar and Roth, Dan and Gupta, Vivek},
+  journal={arXiv preprint arXiv:2508.07630},
+  year={2025}
+}</code></pre>
     </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
+  </section>
+
+  <!-- Partner Logos Strip -->
+  <section class="logo-strip">
+    <div class="container has-text-centered">
+      <div class="logo-row">
+        <a href="https://engineering.asu.edu/" target="_blank">
+          <img src="images/authors/ASU-logo.png" alt="ASU" class="logo-strip-img">
+        </a>
+        <a href="https://www.iiit.ac.in/" target="_blank">
+          <img src="images/authors/iit-h-logo.png" alt="IIIT Hyderabad" class="logo-strip-img">
+        </a>
+        <a href="" target="_self">
+          <img src="images/authors/mercer_logo.jpeg" alt="Mercer Mettl" class="logo-strip-img">
+        </a>
+        <a href="https://www.cis.upenn.edu/" target="_blank">
+          <img src="images/authors/Upen-logo.png" alt="University of Pennsylvania" class="logo-strip-img">
+        </a>
+      </div>
+    </div>
+  </section>
 
 
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
     <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page. You are free to borrow the source code of this website; please link back to this page in the footer. This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
-
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+  </footer>
+</body>
+</html>

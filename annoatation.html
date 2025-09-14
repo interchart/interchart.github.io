@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- ===== Meta for social sharing ===== -->
+  <meta name="description" content="INTERCHART is a diagnostic benchmark for visual reasoning across decomposed and distributed chart information, spanning DECAF, SPECTRA, and STORM subsets with increasing difficulty." />
+  <meta property="og:title" content="INTERCHART: Benchmarking Visual Reasoning Across Decomposed and Distributed Chart Information" />
+  <meta property="og:description" content="Multi-tier benchmark (DECAF, SPECTRA, STORM) evaluating VLMs on multi-chart reasoning, trend correlation, temporal inference, and majority-vote semantic evaluation." />
+  <meta property="og:url" content="https://your-domain.example/interchart" />
+  <meta property="og:image" content="static/images/bar-chart.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:title" content="INTERCHART: Benchmarking Visual Reasoning Across Decomposed and Distributed Chart Information" />
+  <meta name="twitter:description" content="A diagnostic benchmark spanning DECAF, SPECTRA, STORM to stress-test multi-chart reasoning in VLMs." />
+  <meta name="twitter:image" content="static/images/bar-chart.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="keywords" content="INTERCHART, charts, VLMs, multi-chart reasoning, DECAF, SPECTRA, STORM, benchmark" />
+
+  <title>INTERCHART: Benchmarking Visual Reasoning Across Decomposed and Distributed Chart Information</title>
+
+  <link rel="icon" type="image/x-icon" href="static/images/bar-chart.png" />
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet" />
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" /> -->
+
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="static/css/bulma.min.css" />
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css" />
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css" />
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
+  <link rel="stylesheet" href="static/css/index.css" />
+
+  <!-- Template JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+
+<body>
+  <!-- ===== Data-Generation Flowcharts (Grid Layout) ===== -->
+  <section class="section" id="data-generation" style="padding-top:0.5rem; padding-bottom:0.5rem;">
+    <div class="container is-max-desktop" style="padding-top:0.5rem; padding-bottom:0;">
+      <section class="hero is-small" style="margin-bottom:0.5rem; padding-top:0.5rem; padding-bottom:0.5rem;">
+        <div class="hero-body" style="padding:0.25rem 0;">
+          <div class="container has-text-centered" style="margin:0; padding:0;">
+            <a href="index.html" class="button is-dark is-rounded" style="margin:0.25rem 0;">
+              <span class="icon"><i class="fas fa-arrow-left"></i></span>
+              <span>Back to Home</span>
+            </a>
+            <h1 class="title is-2" style="margin:0.25rem 0;">Data-Generation Flowcharts</h1>
+            <p class="subtitle" style="margin:0.25rem 0;">Swipe through Flowcharts for each set of dataset.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- First row: DECAF + SPECTRA -->
+<div class="columns is-multiline" style="margin-top:0.5rem;">
+  <!-- DECAF -->
+  <div class="column is-6-desktop is-12-tablet">
+    <h3 class="title is-3 has-text-centered" style="margin:0.25rem 0;">DECAF</h3>
+    <div class="box" style="padding:0.5rem;">
+      <img
+        src="images/s1.png"
+        alt="DECAF data-generation flowchart"
+        class="img-shadow"
+        style="display:block; width:60%; height:auto; object-fit:contain; border-radius:8px; margin:0 auto;" />
+      <h2 class="subtitle has-text-centered" style="margin:0.25rem 0;">
+        DECAF: decomposed factual QAs from single charts with human filtering.
+      </h2>
+    </div>
+  </div>
+
+  <!-- SPECTRA -->
+  <div class="column is-6-desktop is-12-tablet">
+    <h3 class="title is-3 has-text-centered" style="margin:0.25rem 0;">SPECTRA</h3>
+    <div class="box" style="padding:0.5rem;">
+      <img
+        src="images/s4.png"
+        alt="SPECTRA data-generation flowchart"
+        class="img-shadow"
+        style="display:block; width:23%; height:auto; object-fit:contain; border-radius:8px; margin:0 auto;" />
+      <h2 class="subtitle has-text-centered" style="margin:0.25rem 0;">
+        SPECTRA: correlated vs. independent paired charts with templated QAs and validation.
+      </h2>
+    </div>
+  </div>
+</div>
+
+<!-- Second row: STORM centered -->
+<div class="columns is-centered" style="margin-top:0.5rem;">
+  <div class="column is-8-desktop is-12-tablet">
+    <h3 class="title is-3 has-text-centered" style="margin:0.25rem 0;">STORM</h3>
+    <div class="box" style="padding:0.5rem;">
+      <img
+        src="images/s3.png"
+        alt="STORM data-generation flowchart"
+        class="img-shadow"
+        style="display:block; width:100%; height:auto; object-fit:contain; border-radius:8px; margin:0 auto;" />
+      <h2 class="subtitle has-text-centered" style="margin:0.25rem 0;">
+        STORM: real-world chart pairs and semantic reasoning prompts, with agreement checks.
+      </h2>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+
+
+</html>
