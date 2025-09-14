@@ -1,6 +1,3 @@
-
-
-
 body {
   font-family: 'Noto Sans', sans-serif;
 }
@@ -31,8 +28,19 @@ body {
 }
 
 
+/* Make ONLY the title span the full viewport width even inside a .container */
 .publication-title {
+  display: block;
+  width: 70vw;          /* take the whole viewport */
+  max-width: 70vw;
+  text-align: center;    /* optional */
+  white-space: normal;   /* allow wrapping */
+  line-height: 1.15;     /* tweak if needed */
 }
+
+
+
+
 
 .publication-banner {
   max-height: parent;
@@ -222,13 +230,13 @@ body {
 /* ===============================
    Image Shadows (all images)
    =============================== */
-figure.image img,
+/* figure.image img,
 .team-member img,
 .publication-video iframe,
 .results-carousel .item img {
   box-shadow: 0 6px 16px rgba(0,0,0,.12);
   transition: box-shadow .25s ease, transform .2s ease;
-}
+} */
 
 /* Optional hover lift on images */
 figure.image img:hover,
